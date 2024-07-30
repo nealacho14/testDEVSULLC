@@ -1,0 +1,8 @@
+Escogí inicialmente los dos proyectos(e2e, API) de DemoBlaze, pero la api que refieren en el ejercicio no funciona, para que lo tengan en cuenta y actualicen.
+Tomé de las API el PetStore donde se tiene un CRUD de Usuarios: 
+2.1 : Al enviar la actualización y los campos vacios en una situación real podría actualizar de manera incorrecta tal data
+2.2 : La API por ser de prueba no permite hacer cambios reales por endem el paso 4 de tal ejercicio estaría homologado con el paso 2
+2.3 : La API tiene un solo dato para actualizar, y haciendo pruebas eliminé el dato, por eso los reportes con este caso fallando.
+Se instaló una libreria de reporte(Mochawesome)
+Se integró la dashboard de cypress.io que está en la nube
+Se implementó algo de POM en el ejercicio de front.
