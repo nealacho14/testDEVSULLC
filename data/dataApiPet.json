@@ -1,0 +1,30 @@
+{
+    "datanewuser": {
+            "id": 123456,
+            "username": "Millo",
+            "firstName": "Mario",
+            "lastName": "Castello",
+            "email": "mcastello@emial.com",
+            "password": "P@ssword1",
+            "phone": "3196081523",
+            "userStatus": 1
+    },
+    "dataolduser": {
+        "username": "user1",
+        "firstName": "firstName1",
+        "pass": "password1"
+    },
+    "dataupdateuser": {
+        "username": "Millo",
+        "firstName": "Millito",
+        "email": "millitocastello@email.com"
+    },
+    "datadeleteuser": {
+        "username": "Millo"
+    },
+
+    "support": {
+        "url": "https://petstore.swagger.io/#/",
+        "text": "This is a sample server Petstore server. You can find out more about Swagger at http://swagger.io or on irc.freenode.net, #swagger. For this sample, you can use the api key special-key to test the authorization filters."
+    }
+}

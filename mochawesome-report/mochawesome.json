@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-30T02:40:06.177Z",
+    "end": "2024-07-30T02:40:22.036Z",
+    "duration": 15859,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "088aea58-f973-472d-969a-b9f1bec2f667",
+      "title": "",
+      "fullFile": "cypress\\e2e\\DemoBlazeFront.cy.js",
+      "file": "cypress\\e2e\\DemoBlazeFront.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8ca2e324-ba08-4a6a-bead-b7c56e2d692b",
+          "title": "Realizar una prueba funcional automatizada (Prueba E2E) de un flujo de compra en la página https://www.demoblaze.com/ que incluya:",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Agregar dos productos al carrito, Visualizar el carrito, completar el formulario de compra, Finalizar compra",
+              "fullTitle": "Realizar una prueba funcional automatizada (Prueba E2E) de un flujo de compra en la página https://www.demoblaze.com/ que incluya: Agregar dos productos al carrito, Visualizar el carrito, completar el formulario de compra, Finalizar compra",
+              "timedOut": null,
+              "duration": 12354,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.readFile('data/objetosCompra.json').then(data => {\n  let base = Object.keys(data);\n  pS.clickBtnHome();\n  for (let i = 0; i < 2; i++) {\n    let key = base[i];\n    let value = data[key];\n    cy.contains(value).click();\n    cy.get('.name').contains(value);\n    pS.clickBtnAddCart();\n    pS.clickBtnHome();\n  }\n  pS.clickBtnCart();\n  pS.titleCart();\n  cy.contains('Sony xperia z5');\n  cy.contains('Samsung galaxy s6');\n  diligenciarFormulario();\n});\nfunction diligenciarFormulario() {\n  pS.clickBtnPlaceOrder();\n  pS.setTxtName('Neal');\n  pS.setTxtCountry('Colombia');\n  pS.setTxtCity('Mampujan');\n  pS.setTxtCard('123456789');\n  pS.setTxtMonth('11');\n  pS.setTxtYear('90');\n  pS.clickBtnPurchase();\n  cy.get('.sweet-alert > h2').contains('Thank you for your purchase!');\n}",
+              "err": {},
+              "uuid": "59a42607-dd60-4b29-bedd-ede42ba89541",
+              "parentUUID": "8ca2e324-ba08-4a6a-bead-b7c56e2d692b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "59a42607-dd60-4b29-bedd-ede42ba89541"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12354,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
